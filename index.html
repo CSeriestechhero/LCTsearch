@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <title>LCTsearch | Search Engine by LCTapps</title>
 <link rel="icon" 
@@ -45,7 +41,7 @@ z-index: 99999;
   padding: 5px 3px;
 }
 
-.navbar a, .navbar button, .ripple {
+.navbar a, .navbar button, .ripple, button.showbtn {
   float: left;
   font-family: Roboto, Helvetica, Arial; 
   display: block;
@@ -64,12 +60,13 @@ z-index: 99999;
 </style>
 </head>
 
-<div class="navbar">  
+<div id="myDIV" class="navbar">  
   <button type="button" onclick="location.href='https://cseriestechhero.github.io/about.lctapps_1994-STUDIOS';" >About</button>
 
   <a onclick="launch_toast()">News</a>
   <a onclick="openNav()">Contact LCTapps</a>
-</div><style>
+  <button style="float: right;font-size: 14px;" onclick="myFunction()" title="hide navigation shelf"><strong>▽</strong></button>
+</div><button class="showbtn" style="position: fixed; right: 0; bottom:0;" onclick="myFunction()">˄</button><style>
 .overlay {
   height: 100%;
   width: 0%;
@@ -258,3 +255,14 @@ function closeNav() {
 
 </body>
 </html>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
