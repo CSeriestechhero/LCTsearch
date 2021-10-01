@@ -145,7 +145,7 @@ function closeNav() {
     visibility: hidden;
     max-width: 50px;
    backdrop-filter:blur(6px);
-    height: 50px;
+    height: 100px;
     /*margin-left: -125px;*/
     margin: auto;
     background-color: #01010133;
@@ -156,17 +156,17 @@ function closeNav() {
     position: fixed;
     z-index: 99999;
     left: 0;right:0;
-    bottom: 30px;
+    bottom: 400px;
     font-size: 17px;
-    white-space: nowrap;
+
 }
 #toast #img{
 	width: 50px;
-	height: 50px;
+	height: 100px;
     z-index: 99999;
     float: left;
     
-    padding-top: 16px;
+    padding-top: 40px;
     padding-bottom: 20px;
     
     box-sizing: border-box;
@@ -181,14 +181,13 @@ function closeNav() {
     color: #ffffffcc;
     padding: 16px;
     border-radius: 6px 6px 6px 6px;
-    overflow: hidden;
-	white-space: nowrap;
+    overflow: auto;
 }
 
 #toast.show {
     visibility: visible;
     -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 10s 1s, shrink 0.5s 11s, fadeout 0.5s 11.5s;
 }
 
 @-webkit-keyframes fadein {
@@ -245,7 +244,7 @@ function closeNav() {
 <!-- http://jsfiddle.net/m8x1g0q8/ --><script>function launch_toast() {
     var x = document.getElementById("toast")
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 10000);
 
 }</script>
 
